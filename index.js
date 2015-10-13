@@ -22,7 +22,7 @@ Favbot.prototype = {
     var statuses = tweets.statuses;
     for ( var i = 0, l = statuses.length; i < l; i++ ) {
       var s = statuses[i].text.toLowerCase();
-      if ( s.indexOf( 'diversity' ) > -1 || s.indexOf( 'gamergate' ) > -1 ) {
+      if ( s.indexOf( 'gamergate' ) > -1 ) {
         return;
       } else {
         client.post( 'favorites/create', { id: statuses[i].id_str }, function ( errors, tweets, response ) {} );
